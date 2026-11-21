@@ -1,0 +1,37 @@
+======================================================================
+masked-column pretraining (pretrain_mcp_v2)
+  corpus=cicids task=multiclass8 fold=4 of 5
+  d_model=64 layers=3 heads=4
+  mask_frac=0.3 epochs=20 bs=512 lr=0.001
+  device=cuda
+======================================================================
+  G3 ok: all 15 raw counts and the total (2,830,743) match
+  task=multiclass8: 2,830,743 rows, 69 features, 8 classes
+E:\September Manuscript\MC3-Network paper\mc3gram-repro\mc3gram-code\supplementary\pretrain_mcp_v2.py:155: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:35.)
+  Xva = torch.from_numpy(X[perm[:n_val]]).to(dv)
+  rows: 2892025 pretrain, 152211 held out, 69 columns
+  mean-predictor MSE on the held-out masked cells: 0.021332
+  epoch   1/20  train 0.003848  held-out 0.001988  (0.093 x mean predictor)
+  epoch   2/20  train 0.001774  held-out 0.001483  (0.070 x mean predictor)
+  epoch   3/20  train 0.001460  held-out 0.001295  (0.061 x mean predictor)
+  epoch   4/20  train 0.001301  held-out 0.001198  (0.056 x mean predictor)
+  epoch   5/20  train 0.001225  held-out 0.001138  (0.053 x mean predictor)
+  epoch   6/20  train 0.001157  held-out 0.001065  (0.050 x mean predictor)
+  epoch   7/20  train 0.001110  held-out 0.001050  (0.049 x mean predictor)
+  epoch   8/20  train 0.001065  held-out 0.000992  (0.046 x mean predictor)
+  epoch   9/20  train 0.001035  held-out 0.000972  (0.046 x mean predictor)
+  epoch  10/20  train 0.001004  held-out 0.000981  (0.046 x mean predictor)
+  epoch  11/20  train 0.000976  held-out 0.000957  (0.045 x mean predictor)
+  epoch  12/20  train 0.000950  held-out 0.000881  (0.041 x mean predictor)
+  epoch  13/20  train 0.000917  held-out 0.000897  (0.042 x mean predictor)
+  epoch  14/20  train 0.000893  held-out 0.000858  (0.040 x mean predictor)
+  epoch  15/20  train 0.000871  held-out 0.000857  (0.040 x mean predictor)
+  epoch  16/20  train 0.000856  held-out 0.000824  (0.039 x mean predictor)
+  epoch  17/20  train 0.000844  held-out 0.000813  (0.038 x mean predictor)
+  epoch  18/20  train 0.000837  held-out 0.000802  (0.038 x mean predictor)
+  epoch  19/20  train 0.000825  held-out 0.000800  (0.038 x mean predictor)
+  epoch  20/20  train 0.000820  held-out 0.000798  (0.037 x mean predictor)
+
+  wrote out/mcpv2_cicids_f4.pt  (3179.3s)
+  best held-out 0.000798 vs mean predictor 0.021332 (0.037 x)
+  the fold arguments above must match the run that loads this.

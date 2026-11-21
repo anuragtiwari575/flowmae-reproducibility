@@ -1,0 +1,34 @@
+======================================================================
+masked-column pretraining (pretrain_mcp_v2)
+  corpus=unsw task=multiclass8 fold=2 of 5
+  d_model=64 layers=3 heads=4
+  mask_frac=0.3 epochs=20 bs=512 lr=0.001
+  device=cuda
+======================================================================
+  G3 ok: all ten counts match, 257673 rows pooled
+  rows: 964043 pretrain, 50739 held out, 60 columns
+  mean-predictor MSE on the held-out masked cells: 0.048287
+  epoch   1/20  train 0.009715  held-out 0.004306  (0.089 x mean predictor)
+  epoch   2/20  train 0.004392  held-out 0.003739  (0.077 x mean predictor)
+  epoch   3/20  train 0.003912  held-out 0.003456  (0.072 x mean predictor)
+  epoch   4/20  train 0.003637  held-out 0.003275  (0.068 x mean predictor)
+  epoch   5/20  train 0.003484  held-out 0.003281  (0.068 x mean predictor)
+  epoch   6/20  train 0.003356  held-out 0.003103  (0.064 x mean predictor)
+  epoch   7/20  train 0.003267  held-out 0.003035  (0.063 x mean predictor)
+  epoch   8/20  train 0.003184  held-out 0.002964  (0.061 x mean predictor)
+  epoch   9/20  train 0.003104  held-out 0.002914  (0.060 x mean predictor)
+  epoch  10/20  train 0.003015  held-out 0.002814  (0.058 x mean predictor)
+  epoch  11/20  train 0.002930  held-out 0.002772  (0.057 x mean predictor)
+  epoch  12/20  train 0.002874  held-out 0.002693  (0.056 x mean predictor)
+  epoch  13/20  train 0.002821  held-out 0.002638  (0.055 x mean predictor)
+  epoch  14/20  train 0.002750  held-out 0.002620  (0.054 x mean predictor)
+  epoch  15/20  train 0.002717  held-out 0.002566  (0.053 x mean predictor)
+  epoch  16/20  train 0.002698  held-out 0.002518  (0.052 x mean predictor)
+  epoch  17/20  train 0.002644  held-out 0.002486  (0.051 x mean predictor)
+  epoch  18/20  train 0.002627  held-out 0.002463  (0.051 x mean predictor)
+  epoch  19/20  train 0.002608  held-out 0.002444  (0.051 x mean predictor)
+  epoch  20/20  train 0.002591  held-out 0.002438  (0.050 x mean predictor)
+
+  wrote out/mcpv2_unsw_f2.pt  (661.6s)
+  best held-out 0.002438 vs mean predictor 0.048287 (0.050 x)
+  the fold arguments above must match the run that loads this.
