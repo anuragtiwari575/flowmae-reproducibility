@@ -1,14 +1,8 @@
-# mc3gram-reproducibility
+# flowmae-reproducibility
 
 Replication package for **FlowMAE: Masked-Column Pretraining for
 Clean-Accuracy Recovery in Federated Adversarial Intrusion
 Detection**.
-
-The repository is named for MC3GRAM, the convolutional–recurrent
-detector that is the baseline of this study (arm B) and the subject of
-the earlier work this line of experiments grew out of. Everything here
-belongs to the FlowMAE paper: the same code base produces both the
-baseline and the proposed model, so they are released together.
 
 Every number in the paper is produced from the per-cell result records
 in `records/`. The tables and figures are generated from those records
@@ -60,8 +54,8 @@ with its standard deviation.
 
 | Arm | Architecture | Adv. training | MCP | Extra |
 |---|---|---|---|---|
-| B | MC3GRAM (convolutional–recurrent) | yes | – | – |
-| C | MC3GRAM | yes | – | generative augmentation |
+| B | convolutional–recurrent | yes | – | – |
+| C | convolutional–recurrent | yes | – | generative augmentation |
 | F | FlowMAE | – | – | – |
 | FB | FlowMAE | yes | – | – |
 | FM | FlowMAE | – | yes | – |
